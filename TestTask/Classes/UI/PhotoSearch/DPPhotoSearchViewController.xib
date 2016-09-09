@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DPPhotoSearchViewController">
+            <connections>
+                <outlet property="collectionView" destination="dMm-UW-8bl" id="W4v-na-Q4f"/>
+                <outlet property="searchBar" destination="XjM-Ic-dyL" id="lxh-iR-2sC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="dMm-UW-8bl">
+                    <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jcp-LH-1Nc">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="hPz-j6-yB6"/>
+                        <outlet property="delegate" destination="-1" id="HP1-Yo-sPa"/>
+                    </connections>
+                </collectionView>
+                <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="XjM-Ic-dyL">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                    <color key="barTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="dMm-UW-8bl" firstAttribute="top" secondItem="XjM-Ic-dyL" secondAttribute="bottom" id="8TR-Gd-q9G"/>
+                <constraint firstItem="dMm-UW-8bl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="IeZ-ye-kim"/>
+                <constraint firstItem="XjM-Ic-dyL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="QFk-NY-XNJ"/>
+                <constraint firstAttribute="trailing" secondItem="XjM-Ic-dyL" secondAttribute="trailing" id="W7S-D5-Lld"/>
+                <constraint firstItem="XjM-Ic-dyL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="aj4-hU-oBR"/>
+                <constraint firstAttribute="bottom" secondItem="dMm-UW-8bl" secondAttribute="bottom" id="hLV-fR-PhH"/>
+                <constraint firstAttribute="trailing" secondItem="dMm-UW-8bl" secondAttribute="trailing" id="vzQ-UI-rFI"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

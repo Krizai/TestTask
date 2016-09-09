@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		940CB4751D83408B00B4876F /* DPPhotoSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 940CB4731D83408B00B4876F /* DPPhotoSearchViewController.m */; };
-		940CB4761D83408B00B4876F /* DPPhotoSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 940CB4741D83408B00B4876F /* DPPhotoSearchViewController.xib */; };
+		940CB4821D834AF100B4876F /* DPPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 940CB4801D834AF100B4876F /* DPPhotoCell.m */; };
+		940CB4831D834AF100B4876F /* DPPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 940CB4811D834AF100B4876F /* DPPhotoCell.xib */; };
+		940CB4871D834B0F00B4876F /* DPPhotoSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 940CB4851D834B0F00B4876F /* DPPhotoSearchViewController.m */; };
+		940CB4881D834B0F00B4876F /* DPPhotoSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 940CB4861D834B0F00B4876F /* DPPhotoSearchViewController.xib */; };
+		940CB48D1D834BF000B4876F /* UICollectionView+DP.m in Sources */ = {isa = PBXBuildFile; fileRef = 940CB48C1D834BF000B4876F /* UICollectionView+DP.m */; };
 		9434BDE51D833E7C007F8E92 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9434BDE41D833E7C007F8E92 /* main.m */; };
 		9434BDFE1D833F29007F8E92 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9434BDFD1D833F29007F8E92 /* AppDelegate.m */; };
 		9434BE001D833F3B007F8E92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9434BDFF1D833F3B007F8E92 /* Assets.xcassets */; };
@@ -16,9 +19,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		940CB4721D83408B00B4876F /* DPPhotoSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPPhotoSearchViewController.h; sourceTree = "<group>"; };
-		940CB4731D83408B00B4876F /* DPPhotoSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPPhotoSearchViewController.m; sourceTree = "<group>"; };
-		940CB4741D83408B00B4876F /* DPPhotoSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DPPhotoSearchViewController.xib; sourceTree = "<group>"; };
+		940CB47F1D834AF100B4876F /* DPPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPPhotoCell.h; sourceTree = "<group>"; };
+		940CB4801D834AF100B4876F /* DPPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPPhotoCell.m; sourceTree = "<group>"; };
+		940CB4811D834AF100B4876F /* DPPhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DPPhotoCell.xib; sourceTree = "<group>"; };
+		940CB4841D834B0F00B4876F /* DPPhotoSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPPhotoSearchViewController.h; sourceTree = "<group>"; };
+		940CB4851D834B0F00B4876F /* DPPhotoSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPPhotoSearchViewController.m; sourceTree = "<group>"; };
+		940CB4861D834B0F00B4876F /* DPPhotoSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DPPhotoSearchViewController.xib; sourceTree = "<group>"; };
+		940CB48B1D834BF000B4876F /* UICollectionView+DP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+DP.h"; sourceTree = "<group>"; };
+		940CB48C1D834BF000B4876F /* UICollectionView+DP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+DP.m"; sourceTree = "<group>"; };
 		9434BDE01D833E7C007F8E92 /* TestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9434BDE41D833E7C007F8E92 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9434BDF41D833E7C007F8E92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -39,6 +47,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		940CB4771D834A6A00B4876F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				940CB4781D834A9400B4876F /* PhotoSearch */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		940CB4781D834A9400B4876F /* PhotoSearch */ = {
+			isa = PBXGroup;
+			children = (
+				940CB4841D834B0F00B4876F /* DPPhotoSearchViewController.h */,
+				940CB4851D834B0F00B4876F /* DPPhotoSearchViewController.m */,
+				940CB4861D834B0F00B4876F /* DPPhotoSearchViewController.xib */,
+				940CB4791D834AA900B4876F /* Cells */,
+			);
+			path = PhotoSearch;
+			sourceTree = "<group>";
+		};
+		940CB4791D834AA900B4876F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				940CB47F1D834AF100B4876F /* DPPhotoCell.h */,
+				940CB4801D834AF100B4876F /* DPPhotoCell.m */,
+				940CB4811D834AF100B4876F /* DPPhotoCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		940CB4891D834B7F00B4876F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				940CB48A1D834B8D00B4876F /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		940CB48A1D834B8D00B4876F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				940CB48B1D834BF000B4876F /* UICollectionView+DP.h */,
+				940CB48C1D834BF000B4876F /* UICollectionView+DP.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		9434BDD71D833E7C007F8E92 = {
 			isa = PBXGroup;
 			children = (
@@ -77,11 +131,10 @@
 		9434BDFA1D833EC3007F8E92 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				940CB4891D834B7F00B4876F /* Utils */,
+				940CB4771D834A6A00B4876F /* UI */,
 				9434BDFC1D833F29007F8E92 /* AppDelegate.h */,
 				9434BDFD1D833F29007F8E92 /* AppDelegate.m */,
-				940CB4721D83408B00B4876F /* DPPhotoSearchViewController.h */,
-				940CB4731D83408B00B4876F /* DPPhotoSearchViewController.m */,
-				940CB4741D83408B00B4876F /* DPPhotoSearchViewController.xib */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -154,7 +207,8 @@
 			files = (
 				9434BE031D833F7C007F8E92 /* LaunchScreen.storyboard in Resources */,
 				9434BE001D833F3B007F8E92 /* Assets.xcassets in Resources */,
-				940CB4761D83408B00B4876F /* DPPhotoSearchViewController.xib in Resources */,
+				940CB4831D834AF100B4876F /* DPPhotoCell.xib in Resources */,
+				940CB4881D834B0F00B4876F /* DPPhotoSearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,8 +220,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9434BDFE1D833F29007F8E92 /* AppDelegate.m in Sources */,
+				940CB48D1D834BF000B4876F /* UICollectionView+DP.m in Sources */,
 				9434BDE51D833E7C007F8E92 /* main.m in Sources */,
-				940CB4751D83408B00B4876F /* DPPhotoSearchViewController.m in Sources */,
+				940CB4821D834AF100B4876F /* DPPhotoCell.m in Sources */,
+				940CB4871D834B0F00B4876F /* DPPhotoSearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

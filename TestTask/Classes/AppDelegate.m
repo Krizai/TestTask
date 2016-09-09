@@ -19,8 +19,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    
-    self.window.rootViewController = [DPPhotoSearchViewController new];
+    DPPhotoSearchViewController* photoSearchController = [DPPhotoSearchViewController new];
+    photoSearchController.title = NSLocalizedString(@"Photo Search", @"Screen titile");
+    UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:photoSearchController];
+    navController.navigationBar.translucent = NO;
+    self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
 
     return YES;
