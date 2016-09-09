@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "DBC89110C876E3DD8DA871C9465D52297D79156A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "C8F75973EC7A5F781E52DA54A73DB744E27393AD" : 0,
+    "DBC89110C876E3DD8DA871C9465D52297D79156A" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C54A9C32-E0B4-4795-AD3F-BF8CA8634F2F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "C8F75973EC7A5F781E52DA54A73DB744E27393AD" : "",
+    "DBC89110C876E3DD8DA871C9465D52297D79156A" : "TestTask\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TestTask",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TestTask.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Krizai\/stylight_test.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C8F75973EC7A5F781E52DA54A73DB744E27393AD"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Krizai\/TestTask.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DBC89110C876E3DD8DA871C9465D52297D79156A"
+    }
+  ]
+}
