@@ -25,6 +25,7 @@
 		940CB4BB1D8485AC00B4876F /* DPAlertHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 940CB4BA1D8485AC00B4876F /* DPAlertHelper.m */; };
 		940CB4C01D849B3300B4876F /* DPSearchHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 940CB4BE1D849B3300B4876F /* DPSearchHistoryViewController.m */; };
 		940CB4C11D849B3300B4876F /* DPSearchHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 940CB4BF1D849B3300B4876F /* DPSearchHistoryViewController.xib */; };
+		940CB4C61D849EB900B4876F /* DPSearchFlowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 940CB4C51D849EB900B4876F /* DPSearchFlowController.m */; };
 		9434BDE51D833E7C007F8E92 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9434BDE41D833E7C007F8E92 /* main.m */; };
 		9434BDFE1D833F29007F8E92 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9434BDFD1D833F29007F8E92 /* AppDelegate.m */; };
 		9434BE001D833F3B007F8E92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9434BDFF1D833F3B007F8E92 /* Assets.xcassets */; };
@@ -69,6 +70,8 @@
 		940CB4BD1D849B3300B4876F /* DPSearchHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPSearchHistoryViewController.h; sourceTree = "<group>"; };
 		940CB4BE1D849B3300B4876F /* DPSearchHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPSearchHistoryViewController.m; sourceTree = "<group>"; };
 		940CB4BF1D849B3300B4876F /* DPSearchHistoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DPSearchHistoryViewController.xib; sourceTree = "<group>"; };
+		940CB4C41D849EB900B4876F /* DPSearchFlowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPSearchFlowController.h; sourceTree = "<group>"; };
+		940CB4C51D849EB900B4876F /* DPSearchFlowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPSearchFlowController.m; sourceTree = "<group>"; };
 		9434BDE01D833E7C007F8E92 /* TestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9434BDE41D833E7C007F8E92 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9434BDF41D833E7C007F8E92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,6 +106,7 @@
 		940CB4771D834A6A00B4876F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				940CB4C31D849E7D00B4876F /* FlowController */,
 				940CB4BC1D849AFA00B4876F /* History */,
 				940CB4781D834A9400B4876F /* PhotoSearch */,
 			);
@@ -207,6 +211,15 @@
 				940CB4BF1D849B3300B4876F /* DPSearchHistoryViewController.xib */,
 			);
 			path = History;
+			sourceTree = "<group>";
+		};
+		940CB4C31D849E7D00B4876F /* FlowController */ = {
+			isa = PBXGroup;
+			children = (
+				940CB4C41D849EB900B4876F /* DPSearchFlowController.h */,
+				940CB4C51D849EB900B4876F /* DPSearchFlowController.m */,
+			);
+			path = FlowController;
 			sourceTree = "<group>";
 		};
 		9434BDD71D833E7C007F8E92 = {
@@ -411,6 +424,7 @@
 				940CB4B71D847FA300B4876F /* DPLoadingCell.m in Sources */,
 				940CB4BB1D8485AC00B4876F /* DPAlertHelper.m in Sources */,
 				940CB4A01D84227600B4876F /* DPPhotoPage.m in Sources */,
+				940CB4C61D849EB900B4876F /* DPSearchFlowController.m in Sources */,
 				9434BDE51D833E7C007F8E92 /* main.m in Sources */,
 				940CB4B21D845E0300B4876F /* DPPagingContainer.m in Sources */,
 				940CB4941D84133F00B4876F /* DPNetworkService.m in Sources */,
