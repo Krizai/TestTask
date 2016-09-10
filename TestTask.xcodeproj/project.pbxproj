@@ -13,6 +13,12 @@
 		940CB4871D834B0F00B4876F /* DPPhotoSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 940CB4851D834B0F00B4876F /* DPPhotoSearchViewController.m */; };
 		940CB4881D834B0F00B4876F /* DPPhotoSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 940CB4861D834B0F00B4876F /* DPPhotoSearchViewController.xib */; };
 		940CB48D1D834BF000B4876F /* UICollectionView+DP.m in Sources */ = {isa = PBXBuildFile; fileRef = 940CB48C1D834BF000B4876F /* UICollectionView+DP.m */; };
+		940CB4911D83591F00B4876F /* DPPhotoResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 940CB4901D83591F00B4876F /* DPPhotoResource.m */; };
+		940CB4941D84133F00B4876F /* DPNetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 940CB4931D84133F00B4876F /* DPNetworkService.m */; };
+		940CB49A1D841AAC00B4876F /* DPPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 940CB4991D841AAC00B4876F /* DPPhoto.m */; };
+		940CB4A01D84227600B4876F /* DPPhotoPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 940CB49F1D84227600B4876F /* DPPhotoPage.m */; };
+		940CB4A51D843E7600B4876F /* DPApiService.m in Sources */ = {isa = PBXBuildFile; fileRef = 940CB4A41D843E7600B4876F /* DPApiService.m */; };
+		940CB4AE1D84494000B4876F /* DPPhotoPageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 940CB4AD1D84494000B4876F /* DPPhotoPageRequest.m */; };
 		9434BDE51D833E7C007F8E92 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9434BDE41D833E7C007F8E92 /* main.m */; };
 		9434BDFE1D833F29007F8E92 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9434BDFD1D833F29007F8E92 /* AppDelegate.m */; };
 		9434BE001D833F3B007F8E92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9434BDFF1D833F3B007F8E92 /* Assets.xcassets */; };
@@ -30,6 +36,22 @@
 		940CB4861D834B0F00B4876F /* DPPhotoSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DPPhotoSearchViewController.xib; sourceTree = "<group>"; };
 		940CB48B1D834BF000B4876F /* UICollectionView+DP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+DP.h"; sourceTree = "<group>"; };
 		940CB48C1D834BF000B4876F /* UICollectionView+DP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+DP.m"; sourceTree = "<group>"; };
+		940CB48F1D83591F00B4876F /* DPPhotoResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPPhotoResource.h; sourceTree = "<group>"; };
+		940CB4901D83591F00B4876F /* DPPhotoResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPPhotoResource.m; sourceTree = "<group>"; };
+		940CB4921D84133F00B4876F /* DPNetworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPNetworkService.h; sourceTree = "<group>"; };
+		940CB4931D84133F00B4876F /* DPNetworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPNetworkService.m; sourceTree = "<group>"; };
+		940CB4951D8416F700B4876F /* DPCommonUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPCommonUtils.h; sourceTree = "<group>"; };
+		940CB4961D84177500B4876F /* TestTask.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTask.pch; sourceTree = "<group>"; };
+		940CB4981D841AAC00B4876F /* DPPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPPhoto.h; sourceTree = "<group>"; };
+		940CB4991D841AAC00B4876F /* DPPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPPhoto.m; sourceTree = "<group>"; };
+		940CB49E1D84227600B4876F /* DPPhotoPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPPhotoPage.h; sourceTree = "<group>"; };
+		940CB49F1D84227600B4876F /* DPPhotoPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPPhotoPage.m; sourceTree = "<group>"; };
+		940CB4A31D843E7600B4876F /* DPApiService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPApiService.h; sourceTree = "<group>"; };
+		940CB4A41D843E7600B4876F /* DPApiService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPApiService.m; sourceTree = "<group>"; };
+		940CB4A61D84415900B4876F /* DPApiRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPApiRequest.h; sourceTree = "<group>"; };
+		940CB4A91D84451D00B4876F /* DPApiResponseParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPApiResponseParser.h; sourceTree = "<group>"; };
+		940CB4AC1D84494000B4876F /* DPPhotoPageRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPPhotoPageRequest.h; sourceTree = "<group>"; };
+		940CB4AD1D84494000B4876F /* DPPhotoPageRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPPhotoPageRequest.m; sourceTree = "<group>"; };
 		9434BDE01D833E7C007F8E92 /* TestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9434BDE41D833E7C007F8E92 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9434BDF41D833E7C007F8E92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				940CB48A1D834B8D00B4876F /* Extensions */,
+				940CB4951D8416F700B4876F /* DPCommonUtils.h */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -105,6 +128,42 @@
 				940CB48C1D834BF000B4876F /* UICollectionView+DP.m */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		940CB48E1D8358EF00B4876F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				940CB4AB1D84492300B4876F /* Requests */,
+				940CB48F1D83591F00B4876F /* DPPhotoResource.h */,
+				940CB4A61D84415900B4876F /* DPApiRequest.h */,
+				940CB4A91D84451D00B4876F /* DPApiResponseParser.h */,
+				940CB4A31D843E7600B4876F /* DPApiService.h */,
+				940CB4A41D843E7600B4876F /* DPApiService.m */,
+				940CB4901D83591F00B4876F /* DPPhotoResource.m */,
+				940CB4921D84133F00B4876F /* DPNetworkService.h */,
+				940CB4931D84133F00B4876F /* DPNetworkService.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		940CB4971D841A1100B4876F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				940CB4981D841AAC00B4876F /* DPPhoto.h */,
+				940CB4991D841AAC00B4876F /* DPPhoto.m */,
+				940CB49E1D84227600B4876F /* DPPhotoPage.h */,
+				940CB49F1D84227600B4876F /* DPPhotoPage.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		940CB4AB1D84492300B4876F /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				940CB4AC1D84494000B4876F /* DPPhotoPageRequest.h */,
+				940CB4AD1D84494000B4876F /* DPPhotoPageRequest.m */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 		9434BDD71D833E7C007F8E92 = {
@@ -139,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				9434BDF41D833E7C007F8E92 /* Info.plist */,
+				940CB4961D84177500B4876F /* TestTask.pch */,
 				9434BDE41D833E7C007F8E92 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -147,6 +207,8 @@
 		9434BDFA1D833EC3007F8E92 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				940CB4971D841A1100B4876F /* Models */,
+				940CB48E1D8358EF00B4876F /* Services */,
 				940CB4891D834B7F00B4876F /* Utils */,
 				940CB4771D834A6A00B4876F /* UI */,
 				9434BDFC1D833F29007F8E92 /* AppDelegate.h */,
@@ -295,9 +357,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9434BDFE1D833F29007F8E92 /* AppDelegate.m in Sources */,
+				940CB4AE1D84494000B4876F /* DPPhotoPageRequest.m in Sources */,
 				940CB48D1D834BF000B4876F /* UICollectionView+DP.m in Sources */,
+				940CB49A1D841AAC00B4876F /* DPPhoto.m in Sources */,
+				940CB4911D83591F00B4876F /* DPPhotoResource.m in Sources */,
+				940CB4A01D84227600B4876F /* DPPhotoPage.m in Sources */,
 				9434BDE51D833E7C007F8E92 /* main.m in Sources */,
+				940CB4941D84133F00B4876F /* DPNetworkService.m in Sources */,
 				940CB4821D834AF100B4876F /* DPPhotoCell.m in Sources */,
+				940CB4A51D843E7600B4876F /* DPApiService.m in Sources */,
 				940CB4871D834B0F00B4876F /* DPPhotoSearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +471,7 @@
 			baseConfigurationReference = 813B93C2DE49DF7848431ACA /* Pods-TestTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = TestTask/TestTask.pch;
 				INFOPLIST_FILE = TestTask/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DP.TestTask;
@@ -415,6 +484,7 @@
 			baseConfigurationReference = 27528069D53D3DF70811EE30 /* Pods-TestTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = TestTask/TestTask.pch;
 				INFOPLIST_FILE = TestTask/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DP.TestTask;

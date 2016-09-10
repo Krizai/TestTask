@@ -9,6 +9,7 @@
 #import "DPPhotoSearchViewController.h"
 #import "UICollectionView+DP.h"
 #import "DPPhotoCell.h"
+#import "DPPhotoResource.h"
 
 static NSUInteger const DPPhotoSearchViewControllerColumnCount = 3;
 
@@ -16,16 +17,39 @@ static NSUInteger const DPPhotoSearchViewControllerColumnCount = 3;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
+@property (strong, nonatomic) DPPhotoResource* photoResource;
+
 @end
 
 @implementation DPPhotoSearchViewController
+
+- (instancetype)initWithPhotoResource:(DPPhotoResource*) photoResource
+{
+    self = [super init];
+    if (self) {
+        _photoResource = photoResource;
+    }
+    return self;
+}
 
 
 - (void)viewDidLoad{
     [super viewDidLoad];
     [self.collectionView dp_registerCellClass:[DPPhotoCell class]];
+    
+    [self loadData];
 }
 
+- (void) loadData{
+    [self.photoResource loadPhotoPage:0
+                        forSearchText:@"Test"
+                           completion:^(DPPhotoPage * _Nonnull page, NSError * _Nonnull error) {
+                               int i = 0; i++;
+                           }];
+}
+
+
+#pragma mark UICollectionViewDelegate/DataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return 10;
 }

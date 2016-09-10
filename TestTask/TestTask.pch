@@ -1,0 +1,14 @@
+//
+//  TestTask.pch
+//  TestTask
+//
+//  Created by Dmitry Povolotsky on 9/10/16.
+//  Copyright © 2016 Dmitry Povolotskyi. All rights reserved.
+//
+
+#ifndef TestTask_pch
+#define TestTask_pch
+
+#include "DPCommonUtils.h"
+
+#endif /* TestTask_pch */

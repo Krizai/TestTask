@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "DPPhotoSearchViewController.h"
+#import "DPNetworkService.h"
+#import "DPApiService.h"
+#import "DPPhotoResource.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +22,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    DPPhotoSearchViewController* photoSearchController = [DPPhotoSearchViewController new];
+    DPNetworkService* network = [DPNetworkService new];
+    DPApiService* api = [[DPApiService alloc] initWithNetwork:network];;
+    DPPhotoResource* photoResource = [[DPPhotoResource alloc] initWithApi:api];
+    
+    DPPhotoSearchViewController* photoSearchController = [[DPPhotoSearchViewController alloc] initWithPhotoResource:photoResource];
     photoSearchController.title = NSLocalizedString(@"Photo Search", @"Screen titile");
     UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:photoSearchController];
     navController.navigationBar.translucent = NO;

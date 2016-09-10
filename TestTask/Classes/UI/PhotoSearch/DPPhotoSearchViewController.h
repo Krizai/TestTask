@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class DPPhotoResource;
 @interface DPPhotoSearchViewController : UIViewController
+
+- (instancetype)initWithPhotoResource:(DPPhotoResource*) photoResource;
 
 @end
