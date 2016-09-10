@@ -7,6 +7,8 @@
 //
 
 #import "DPPhotoCell.h"
+#import "DPPhoto.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface DPPhotoCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -15,9 +17,15 @@
 
 @implementation DPPhotoCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+- (void) fillWithPhoto:(DPPhoto*)photo{
+    NSURL* photoUrl = [self urlForPhoto:photo];
+    [self.imageView sd_setImageWithURL:photoUrl];
+}
+
+- (NSURL*) urlForPhoto:(DPPhoto*)photo{
+    NSString* urlString = [NSString stringWithFormat:@"https://farm%@.static.flickr.com/%@/%@_%@.jpg",
+                           photo.farm, photo.server, photo.photoId, photo.secret];
+    return [NSURL URLWithString:urlString];
 }
 
 @end

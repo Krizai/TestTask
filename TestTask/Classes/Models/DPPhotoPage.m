@@ -18,6 +18,11 @@
 
 
 @implementation DPPhotoPage
+@dynamic objects;
+
+- (NSArray *)objects{
+    return _photos;
+}
 
 +(JSONKeyMapper*)keyMapper
 {

@@ -9,15 +9,35 @@
 #import "DPPhotoSearchViewController.h"
 #import "UICollectionView+DP.h"
 #import "DPPhotoCell.h"
+#import "DPLoadingCell.h"
 #import "DPPhotoResource.h"
+#import "DPPhoto.h"
+#import "DPPhotoPage.h"
+#import "DPPagingContainer.h"
+#import "DPAlertHelper.h"
 
 static NSUInteger const DPPhotoSearchViewControllerColumnCount = 3;
 
-@interface DPPhotoSearchViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+typedef NS_ENUM(NSUInteger, DPPhotoSearchViewControllerState) {
+    DPPhotoSearchViewControllerStart,
+    DPPhotoSearchViewControllerNoData,
+    DPPhotoSearchViewControllerLoading,
+    DPPhotoSearchViewControllerLoaded,
+    DPPhotoSearchViewControllerError
+};
+
+@interface DPPhotoSearchViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UISearchBarDelegate>
+@property (weak, nonatomic) IBOutlet UIView *welcomeState;
+@property (weak, nonatomic) IBOutlet UIView *emptyState;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
-@property (strong, nonatomic) DPPhotoResource* photoResource;
+@property (strong, nonatomic) NSString* searchText;
+@property (strong, nonatomic) DPPagingContainer* pagingContainer;
+
+@property (strong, nonatomic, readonly) DPPhotoResource* photoResource;
+
+@property (assign, nonatomic) DPPhotoSearchViewControllerState state;
 
 @end
 
@@ -28,6 +48,7 @@ static NSUInteger const DPPhotoSearchViewControllerColumnCount = 3;
     self = [super init];
     if (self) {
         _photoResource = photoResource;
+        _pagingContainer = [DPPagingContainer new];
     }
     return self;
 }
@@ -35,35 +56,107 @@ static NSUInteger const DPPhotoSearchViewControllerColumnCount = 3;
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    self.state = DPPhotoSearchViewControllerStart;
     [self.collectionView dp_registerCellClass:[DPPhotoCell class]];
+    [self.collectionView dp_registerCellClass:[DPLoadingCell class]];
     
-    [self loadData];
 }
 
-- (void) loadData{
-    [self.photoResource loadPhotoPage:0
-                        forSearchText:@"Test"
+- (void)setState:(DPPhotoSearchViewControllerState)state{
+    
+    DPPhotoSearchViewControllerState previousState = state;
+    _state = state;
+    
+    self.collectionView.hidden = state == DPPhotoSearchViewControllerNoData || self.state == DPPhotoSearchViewControllerStart;
+    self.emptyState.hidden = state != DPPhotoSearchViewControllerNoData;
+    self.welcomeState.hidden = state != DPPhotoSearchViewControllerStart;
+    
+    if([self sectionForState:previousState] != [self sectionForState:state]){
+        [self.collectionView reloadData];
+    }
+}
+
+- (void) reloadData{
+    [self.pagingContainer clean];
+    [self loadMoreData];
+}
+
+- (void) loadMoreData{
+    self.state = DPPhotoSearchViewControllerLoading;
+    [self.collectionView reloadData];
+
+    [self.photoResource loadPhotoPage:self.pagingContainer.pagesLoaded
+                        forSearchText:self.searchText
                            completion:^(DPPhotoPage * _Nonnull page, NSError * _Nonnull error) {
-                               int i = 0; i++;
+                               if(error){
+                                   self.state = DPPhotoSearchViewControllerError;
+                                   if(self.pagingContainer.pagesLoaded == 0){
+                                       [DPAlertHelper presentFrom:self
+                                                        withTitle:NSLocalizedString(@"Error", nil)
+                                                          message:NSLocalizedString(@"Can't load photos. Please try again later", nil)];
+                                   }
+                                   return;
+                               }
+                               [self.pagingContainer addPage:page];
+                               self.state = self.pagingContainer.pagesLoaded > 0 ? DPPhotoSearchViewControllerLoaded : DPPhotoSearchViewControllerNoData;
+                               [self.collectionView reloadData];
                            }];
 }
 
 
 #pragma mark UICollectionViewDelegate/DataSource
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return [self sectionForState:self.state];
+}
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 10;
+    return section == 0 ? self.pagingContainer.objects.count : 1 ;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    UICollectionViewCell* cell = [self.collectionView dp_dequeueReusableCellClass:[DPPhotoCell class] forIndexPath:indexPath];
+    if(indexPath.section == 1){
+        DPLoadingCell* cell = [self.collectionView dp_dequeueReusableCellClass:[DPLoadingCell class] forIndexPath:indexPath];
+        return cell;
+    }
+    
+    DPPhoto* photo = self.pagingContainer.objects[indexPath.row];
+    DPPhotoCell* cell = [self.collectionView dp_dequeueReusableCellClass:[DPPhotoCell class] forIndexPath:indexPath];
+    [cell fillWithPhoto:photo];
     return cell;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-        UICollectionViewFlowLayout* flowLayout = (UICollectionViewFlowLayout*)collectionViewLayout;
-        CGFloat cellWidth = collectionView.frame.size.width / DPPhotoSearchViewControllerColumnCount - flowLayout.minimumInteritemSpacing;
-        return CGSizeMake(cellWidth, cellWidth);
+    UICollectionViewFlowLayout* flowLayout = (UICollectionViewFlowLayout*)collectionViewLayout;
 
+    if(indexPath.section == 1){
+        return CGSizeMake(collectionView.frame.size.width, 40);
+    }
+    
+    CGFloat cellWidth = collectionView.frame.size.width / DPPhotoSearchViewControllerColumnCount - flowLayout.minimumInteritemSpacing;
+    return CGSizeMake(cellWidth, cellWidth);
+    
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat bottomContentOffset = scrollView.contentOffset.y + scrollView.frame.size.height;
+    BOOL positionShouldCallLoadMore = scrollView.contentSize.height - bottomContentOffset < 100;
+    
+    if (positionShouldCallLoadMore &&
+        (self.state == DPPhotoSearchViewControllerLoaded || self.state == DPPhotoSearchViewControllerError) &&
+        self.pagingContainer.totalPages > self.pagingContainer.pagesLoaded) {
+        [self loadMoreData];
+    }
+}
+
+#pragma mark UISearchBarDelegate
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    self.searchText = searchBar.text;
+    [self reloadData];
+}
+
+- (NSUInteger) sectionForState:(DPPhotoSearchViewControllerState) state{
+    return (state == DPPhotoSearchViewControllerLoading || state == DPPhotoSearchViewControllerError) ? 2 : 1;
 }
 
 @end

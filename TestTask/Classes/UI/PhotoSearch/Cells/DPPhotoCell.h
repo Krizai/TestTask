@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class DPPhoto;
+
 @interface DPPhotoCell : UICollectionViewCell
+
+- (void) fillWithPhoto:(DPPhoto*)photo;
 
 @end

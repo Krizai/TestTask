@@ -19,6 +19,12 @@
 		940CB4A01D84227600B4876F /* DPPhotoPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 940CB49F1D84227600B4876F /* DPPhotoPage.m */; };
 		940CB4A51D843E7600B4876F /* DPApiService.m in Sources */ = {isa = PBXBuildFile; fileRef = 940CB4A41D843E7600B4876F /* DPApiService.m */; };
 		940CB4AE1D84494000B4876F /* DPPhotoPageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 940CB4AD1D84494000B4876F /* DPPhotoPageRequest.m */; };
+		940CB4B21D845E0300B4876F /* DPPagingContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 940CB4B11D845E0300B4876F /* DPPagingContainer.m */; };
+		940CB4B71D847FA300B4876F /* DPLoadingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 940CB4B51D847FA300B4876F /* DPLoadingCell.m */; };
+		940CB4B81D847FA300B4876F /* DPLoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 940CB4B61D847FA300B4876F /* DPLoadingCell.xib */; };
+		940CB4BB1D8485AC00B4876F /* DPAlertHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 940CB4BA1D8485AC00B4876F /* DPAlertHelper.m */; };
+		940CB4C01D849B3300B4876F /* DPSearchHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 940CB4BE1D849B3300B4876F /* DPSearchHistoryViewController.m */; };
+		940CB4C11D849B3300B4876F /* DPSearchHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 940CB4BF1D849B3300B4876F /* DPSearchHistoryViewController.xib */; };
 		9434BDE51D833E7C007F8E92 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9434BDE41D833E7C007F8E92 /* main.m */; };
 		9434BDFE1D833F29007F8E92 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9434BDFD1D833F29007F8E92 /* AppDelegate.m */; };
 		9434BE001D833F3B007F8E92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9434BDFF1D833F3B007F8E92 /* Assets.xcassets */; };
@@ -52,6 +58,17 @@
 		940CB4A91D84451D00B4876F /* DPApiResponseParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPApiResponseParser.h; sourceTree = "<group>"; };
 		940CB4AC1D84494000B4876F /* DPPhotoPageRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPPhotoPageRequest.h; sourceTree = "<group>"; };
 		940CB4AD1D84494000B4876F /* DPPhotoPageRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPPhotoPageRequest.m; sourceTree = "<group>"; };
+		940CB4B01D845E0300B4876F /* DPPagingContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPPagingContainer.h; sourceTree = "<group>"; };
+		940CB4B11D845E0300B4876F /* DPPagingContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPPagingContainer.m; sourceTree = "<group>"; };
+		940CB4B31D845F1B00B4876F /* DPPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPPage.h; sourceTree = "<group>"; };
+		940CB4B41D847FA300B4876F /* DPLoadingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPLoadingCell.h; sourceTree = "<group>"; };
+		940CB4B51D847FA300B4876F /* DPLoadingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPLoadingCell.m; sourceTree = "<group>"; };
+		940CB4B61D847FA300B4876F /* DPLoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DPLoadingCell.xib; sourceTree = "<group>"; };
+		940CB4B91D8485AC00B4876F /* DPAlertHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPAlertHelper.h; sourceTree = "<group>"; };
+		940CB4BA1D8485AC00B4876F /* DPAlertHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPAlertHelper.m; sourceTree = "<group>"; };
+		940CB4BD1D849B3300B4876F /* DPSearchHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPSearchHistoryViewController.h; sourceTree = "<group>"; };
+		940CB4BE1D849B3300B4876F /* DPSearchHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPSearchHistoryViewController.m; sourceTree = "<group>"; };
+		940CB4BF1D849B3300B4876F /* DPSearchHistoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DPSearchHistoryViewController.xib; sourceTree = "<group>"; };
 		9434BDE01D833E7C007F8E92 /* TestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9434BDE41D833E7C007F8E92 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9434BDF41D833E7C007F8E92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,6 +103,7 @@
 		940CB4771D834A6A00B4876F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				940CB4BC1D849AFA00B4876F /* History */,
 				940CB4781D834A9400B4876F /* PhotoSearch */,
 			);
 			path = UI;
@@ -108,6 +126,9 @@
 				940CB47F1D834AF100B4876F /* DPPhotoCell.h */,
 				940CB4801D834AF100B4876F /* DPPhotoCell.m */,
 				940CB4811D834AF100B4876F /* DPPhotoCell.xib */,
+				940CB4B41D847FA300B4876F /* DPLoadingCell.h */,
+				940CB4B51D847FA300B4876F /* DPLoadingCell.m */,
+				940CB4B61D847FA300B4876F /* DPLoadingCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -117,6 +138,8 @@
 			children = (
 				940CB48A1D834B8D00B4876F /* Extensions */,
 				940CB4951D8416F700B4876F /* DPCommonUtils.h */,
+				940CB4B91D8485AC00B4876F /* DPAlertHelper.h */,
+				940CB4BA1D8485AC00B4876F /* DPAlertHelper.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -149,6 +172,7 @@
 		940CB4971D841A1100B4876F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				940CB4B31D845F1B00B4876F /* DPPage.h */,
 				940CB4981D841AAC00B4876F /* DPPhoto.h */,
 				940CB4991D841AAC00B4876F /* DPPhoto.m */,
 				940CB49E1D84227600B4876F /* DPPhotoPage.h */,
@@ -164,6 +188,25 @@
 				940CB4AD1D84494000B4876F /* DPPhotoPageRequest.m */,
 			);
 			path = Requests;
+			sourceTree = "<group>";
+		};
+		940CB4AF1D845DD000B4876F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				940CB4B01D845E0300B4876F /* DPPagingContainer.h */,
+				940CB4B11D845E0300B4876F /* DPPagingContainer.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		940CB4BC1D849AFA00B4876F /* History */ = {
+			isa = PBXGroup;
+			children = (
+				940CB4BD1D849B3300B4876F /* DPSearchHistoryViewController.h */,
+				940CB4BE1D849B3300B4876F /* DPSearchHistoryViewController.m */,
+				940CB4BF1D849B3300B4876F /* DPSearchHistoryViewController.xib */,
+			);
+			path = History;
 			sourceTree = "<group>";
 		};
 		9434BDD71D833E7C007F8E92 = {
@@ -207,6 +250,7 @@
 		9434BDFA1D833EC3007F8E92 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				940CB4AF1D845DD000B4876F /* Common */,
 				940CB4971D841A1100B4876F /* Models */,
 				940CB48E1D8358EF00B4876F /* Services */,
 				940CB4891D834B7F00B4876F /* Utils */,
@@ -295,7 +339,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9434BE031D833F7C007F8E92 /* LaunchScreen.storyboard in Resources */,
+				940CB4C11D849B3300B4876F /* DPSearchHistoryViewController.xib in Resources */,
 				9434BE001D833F3B007F8E92 /* Assets.xcassets in Resources */,
+				940CB4B81D847FA300B4876F /* DPLoadingCell.xib in Resources */,
 				940CB4831D834AF100B4876F /* DPPhotoCell.xib in Resources */,
 				940CB4881D834B0F00B4876F /* DPPhotoSearchViewController.xib in Resources */,
 			);
@@ -360,9 +406,13 @@
 				940CB4AE1D84494000B4876F /* DPPhotoPageRequest.m in Sources */,
 				940CB48D1D834BF000B4876F /* UICollectionView+DP.m in Sources */,
 				940CB49A1D841AAC00B4876F /* DPPhoto.m in Sources */,
+				940CB4C01D849B3300B4876F /* DPSearchHistoryViewController.m in Sources */,
 				940CB4911D83591F00B4876F /* DPPhotoResource.m in Sources */,
+				940CB4B71D847FA300B4876F /* DPLoadingCell.m in Sources */,
+				940CB4BB1D8485AC00B4876F /* DPAlertHelper.m in Sources */,
 				940CB4A01D84227600B4876F /* DPPhotoPage.m in Sources */,
 				9434BDE51D833E7C007F8E92 /* main.m in Sources */,
+				940CB4B21D845E0300B4876F /* DPPagingContainer.m in Sources */,
 				940CB4941D84133F00B4876F /* DPNetworkService.m in Sources */,
 				940CB4821D834AF100B4876F /* DPPhotoCell.m in Sources */,
 				940CB4A51D843E7600B4876F /* DPApiService.m in Sources */,
@@ -472,6 +522,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = TestTask/TestTask.pch;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = TestTask/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DP.TestTask;
@@ -485,6 +536,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = TestTask/TestTask.pch;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = TestTask/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DP.TestTask;
