@@ -114,6 +114,13 @@ typedef NS_ENUM(NSUInteger, DPPhotoSearchViewControllerState) {
                            }];
 }
 
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    [self.collectionView.collectionViewLayout invalidateLayout];
+}
+
+
+
 
 #pragma mark UICollectionViewDelegate/DataSource
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{

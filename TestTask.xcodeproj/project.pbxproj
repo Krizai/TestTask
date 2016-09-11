@@ -200,11 +200,11 @@
 			children = (
 				940CB4AB1D84492300B4876F /* Requests */,
 				940CB48F1D83591F00B4876F /* DPPhotoResource.h */,
+				940CB4901D83591F00B4876F /* DPPhotoResource.m */,
 				940CB4A61D84415900B4876F /* DPApiRequest.h */,
 				940CB4A91D84451D00B4876F /* DPApiResponseParser.h */,
 				940CB4A31D843E7600B4876F /* DPApiService.h */,
 				940CB4A41D843E7600B4876F /* DPApiService.m */,
-				940CB4901D83591F00B4876F /* DPPhotoResource.m */,
 				940CB4921D84133F00B4876F /* DPNetworkService.h */,
 				940CB4931D84133F00B4876F /* DPNetworkService.m */,
 				940CB4C71D85418000B4876F /* DPSearchHistoryResource.h */,
