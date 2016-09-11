@@ -6,3 +6,7 @@ target 'TestTask' do
   pod 'SDWebImage'
   pod 'JSONModel'
 end
+
+target 'TestTaskTests' do
+  pod 'OCMock'
+end
