@@ -15,6 +15,7 @@
 #import "DPPhotoPage.h"
 #import "DPPagingContainer.h"
 #import "DPAlertHelper.h"
+#import "DPSearchHistoryResource.h"
 
 static NSUInteger const DPPhotoSearchViewControllerColumnCount = 3;
 
@@ -36,6 +37,7 @@ typedef NS_ENUM(NSUInteger, DPPhotoSearchViewControllerState) {
 @property (strong, nonatomic) DPPagingContainer* pagingContainer;
 
 @property (strong, nonatomic, readonly) DPPhotoResource* photoResource;
+@property (strong, nonatomic, readonly) DPSearchHistoryResource* searchHistoryResource;
 
 @property (assign, nonatomic) DPPhotoSearchViewControllerState state;
 
@@ -44,10 +46,12 @@ typedef NS_ENUM(NSUInteger, DPPhotoSearchViewControllerState) {
 @implementation DPPhotoSearchViewController
 
 - (instancetype)initWithPhotoResource:(DPPhotoResource*) photoResource
+                searchHistoryResource:(DPSearchHistoryResource*) searchHistoryResource
 {
     self = [super init];
     if (self) {
         _photoResource = photoResource;
+        _searchHistoryResource = searchHistoryResource;
         _pagingContainer = [DPPagingContainer new];
     }
     return self;
@@ -61,6 +65,13 @@ typedef NS_ENUM(NSUInteger, DPPhotoSearchViewControllerState) {
     [self.collectionView dp_registerCellClass:[DPLoadingCell class]];
     
 }
+
+-(void)searchFor:(NSString*) searchItem{
+    self.searchText = searchItem;
+    self.searchBar.text = searchItem;
+    [self reloadData];
+}
+
 
 - (void)setState:(DPPhotoSearchViewControllerState)state{
     
@@ -151,7 +162,10 @@ typedef NS_ENUM(NSUInteger, DPPhotoSearchViewControllerState) {
 #pragma mark UISearchBarDelegate
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
-    self.searchText = searchBar.text;
+    NSString* searchText = searchBar.text;
+    
+    self.searchText = searchText;
+    [self.searchHistoryResource addHistoryItem:searchText];
     [self reloadData];
 }
 

@@ -9,8 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @class DPPhotoResource;
+@class DPSearchHistoryResource;
+
 @interface DPPhotoSearchViewController : UIViewController
 
-- (instancetype)initWithPhotoResource:(DPPhotoResource*) photoResource;
+- (instancetype)initWithPhotoResource:(DPPhotoResource*) photoResource
+                searchHistoryResource:(DPSearchHistoryResource*) searchHistoryResource;
+
+
+-(void)searchFor:(NSString*) searchItem;
 
 @end

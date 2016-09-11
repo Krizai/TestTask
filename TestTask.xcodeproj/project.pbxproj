@@ -26,6 +26,8 @@
 		940CB4C01D849B3300B4876F /* DPSearchHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 940CB4BE1D849B3300B4876F /* DPSearchHistoryViewController.m */; };
 		940CB4C11D849B3300B4876F /* DPSearchHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 940CB4BF1D849B3300B4876F /* DPSearchHistoryViewController.xib */; };
 		940CB4C61D849EB900B4876F /* DPSearchFlowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 940CB4C51D849EB900B4876F /* DPSearchFlowController.m */; };
+		940CB4C91D85418000B4876F /* DPSearchHistoryResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 940CB4C81D85418000B4876F /* DPSearchHistoryResource.m */; };
+		940CB4CF1D85599D00B4876F /* UITableView+DP.m in Sources */ = {isa = PBXBuildFile; fileRef = 940CB4CE1D85599D00B4876F /* UITableView+DP.m */; };
 		9434BDE51D833E7C007F8E92 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9434BDE41D833E7C007F8E92 /* main.m */; };
 		9434BDFE1D833F29007F8E92 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9434BDFD1D833F29007F8E92 /* AppDelegate.m */; };
 		9434BE001D833F3B007F8E92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9434BDFF1D833F3B007F8E92 /* Assets.xcassets */; };
@@ -72,6 +74,10 @@
 		940CB4BF1D849B3300B4876F /* DPSearchHistoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DPSearchHistoryViewController.xib; sourceTree = "<group>"; };
 		940CB4C41D849EB900B4876F /* DPSearchFlowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPSearchFlowController.h; sourceTree = "<group>"; };
 		940CB4C51D849EB900B4876F /* DPSearchFlowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPSearchFlowController.m; sourceTree = "<group>"; };
+		940CB4C71D85418000B4876F /* DPSearchHistoryResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPSearchHistoryResource.h; sourceTree = "<group>"; };
+		940CB4C81D85418000B4876F /* DPSearchHistoryResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPSearchHistoryResource.m; sourceTree = "<group>"; };
+		940CB4CD1D85599D00B4876F /* UITableView+DP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+DP.h"; sourceTree = "<group>"; };
+		940CB4CE1D85599D00B4876F /* UITableView+DP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+DP.m"; sourceTree = "<group>"; };
 		9434BDE01D833E7C007F8E92 /* TestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9434BDE41D833E7C007F8E92 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9434BDF41D833E7C007F8E92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -151,6 +157,8 @@
 		940CB48A1D834B8D00B4876F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				940CB4CD1D85599D00B4876F /* UITableView+DP.h */,
+				940CB4CE1D85599D00B4876F /* UITableView+DP.m */,
 				940CB48B1D834BF000B4876F /* UICollectionView+DP.h */,
 				940CB48C1D834BF000B4876F /* UICollectionView+DP.m */,
 			);
@@ -169,6 +177,8 @@
 				940CB4901D83591F00B4876F /* DPPhotoResource.m */,
 				940CB4921D84133F00B4876F /* DPNetworkService.h */,
 				940CB4931D84133F00B4876F /* DPNetworkService.m */,
+				940CB4C71D85418000B4876F /* DPSearchHistoryResource.h */,
+				940CB4C81D85418000B4876F /* DPSearchHistoryResource.m */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -428,9 +438,11 @@
 				9434BDE51D833E7C007F8E92 /* main.m in Sources */,
 				940CB4B21D845E0300B4876F /* DPPagingContainer.m in Sources */,
 				940CB4941D84133F00B4876F /* DPNetworkService.m in Sources */,
+				940CB4CF1D85599D00B4876F /* UITableView+DP.m in Sources */,
 				940CB4821D834AF100B4876F /* DPPhotoCell.m in Sources */,
 				940CB4A51D843E7600B4876F /* DPApiService.m in Sources */,
 				940CB4871D834B0F00B4876F /* DPPhotoSearchViewController.m in Sources */,
+				940CB4C91D85418000B4876F /* DPSearchHistoryResource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
